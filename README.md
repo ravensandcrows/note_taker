@@ -2,12 +2,8 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+A note taking app, where notes can be stored, read, and deleted.
+This will allow users to keep track of thoughts, schedules, lists etc. that they need to periodically review. This project also uses express to create a server and routes between different static pages.
 
 ## Table of Contents (Optional)
 
@@ -17,18 +13,39 @@ If your README is long, add a table of contents to make it easy for users to fin
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Features](#features)
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Click the following link to run the app:
+
+https://warm-ocean-32017-3da30a6fefb4.herokuapp.com/notes
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+After going to the landing page hit get started. 
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+![landing page](./public/assets/images/landing-page.png)
 
-![alt text](assets/images/screenshot.png)
+You'll then see a page with your old notes in the left hand column, and a place to write new notes in the right hand column. 
+
+![note taking page](./public/assets/images/note-taker-page.png)
+
+The left hand column holds your old notes:
+
+![old notes](./public/assets/images/old-notes.png)
+
+The right hand column you can write in it. At the top of the page a clear button and a save button will appear. Both a title and text must be added to save.
+
+![new notes](./public/assets/images/new-note.png)
+
+After hitting save the new note should be on the left hand side. If you hit the trash can the note will be deleted.
+
+![updated notes](./public/assets/images/updated-notes.png)
+
+If you click an old note it will show up on the right hand column.
+
+![read old notes](./public/assets/images/read-note.png)
 
 ## Credits
 
@@ -54,20 +71,10 @@ https://developerport.medium.com/understanding-process-env-port-in-node-js-e09ae
 
 MIT
 
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't necessary, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
 ## Features
 
-If your project has a lot of features, list them here.
+Write notes
 
-## How to Contribute
+Read notes
 
-If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+Delete notes
