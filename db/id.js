@@ -17,7 +17,7 @@ class NoteID {
 
   //writes the new note
   write(note) {
-    return writeFileAsync('db/db.json', JSON.stringify(note, null, 2));
+    return writeFileAsync('db/db.json', JSON.stringify(note, null, 3));
   }
 
   //finds the specific note using id
