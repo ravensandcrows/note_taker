@@ -32,19 +32,27 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+tutorials:
+https://www.youtube.com/watch?v=SyiL0J80gDQ
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+https://github.com/jfisher396/express-note-taker/blob/main/routes/apiRoutes.js
 
-If you followed tutorials, include links to those here as well.
+concepts:
+https://www.geeksforgeeks.org/why-we-use-then-method-in-javascript/
+
+https://medium.com/@suyashmohan/util-promisify-in-node-js-v8-d07ef4ea8c53
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error
+
+https://www.geeksforgeeks.org/express-js-express-router-function/
+
+https://developerport.medium.com/understanding-process-env-port-in-node-js-e09aef80384c
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+MIT
 
 ## Badges
 

@@ -1,38 +1,37 @@
-const fb = require('express').Router();
-const { readAndAppend } = require('../helpers/fsUtils');
-const uuid = require('../helpers/uuid');
+const router = require('express').Router();
+//get the ids
+const id = require('../db/id');
 
-// GET Route for retrieving all the feedback
-fb.get('/', (req, res) =>
-  readFromFile('./db/feedback.json').then((data) => res.json(JSON.parse(data)))
-);
-
-// POST Route for submitting feedback
-fb.post('/', (req, res) => {
-  // Destructuring assignment for the items in req.body
-  const { email, feedbackType, feedback } = req.body;
-
-  // If all the required properties are present
-  if (email && feedbackType && feedback) {
-    // Variable for the object we will save
-    const newFeedback = {
-      email,
-      feedbackType,
-      feedback,
-      feedback_id: uuid(),
-    };
-
-    readAndAppend(newFeedback, './db/feedback.json');
-
-    const response = {
-      status: 'success',
-      body: newFeedback,
-    };
-
-    res.json(response);
-  } else {
-    res.json('Error in posting feedback');
-  }
+// GET "/api/notes" responds with all notes from the database
+router.get('/notes', (req, res) => {
+  id
+  //run function from id js
+    .retrieveNotes()
+    //handle the asynch function to run on promise, or to err on fail
+    .then((note) => {
+      return res.json(note);
+    })
+    //return a internal server error when rejected
+    .catch((err) => res.status(500).json(err));
 });
 
-module.exports = fb;
+//post new notes to database
+router.post('/notes', (req, res) => {
+  //call id class from id.js
+  id
+  //calls add note function to update the req
+    .addNote(req.body)
+    //then/catch to respond with the update or push an err
+    .then((note) => res.json(note))
+    .catch((err) => res.status(500).json(err));
+});
+
+// :id identifies the specific id currently being targeted
+router.delete('/notes/:id', (req, res) => {
+  id
+    .deleteNote(req.params.id)
+    .then(() => res.json({ ok: true }))
+    .catch((err) => res.status(500).json(err));
+});
+
+module.exports = router;
